@@ -15,7 +15,7 @@ def launch(path, config_file=None):
     if config_file:
         config.load_file(config_file)
     else:
-        config_path = os.path.join(click.get_app_dir('wsl-explorer-launcher'),
+        config_path = os.path.join(click.get_app_dir('wsl-explorer'),
                                    'config.yaml')
         if os.path.exists(config_path):
             config.load_file(config_path)

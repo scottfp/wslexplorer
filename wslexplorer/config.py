@@ -1,4 +1,4 @@
-import os
+import errno, os
 import ruamel.yaml as yaml
 from getpass import getuser
 
@@ -26,7 +26,11 @@ class Config(yaml.comments.CommentedMap):
     def save_file(self, filename):
         dirname = os.path.dirname(filename)
         if dirname:
-            os.makedirs(dirname, exist_ok=True)
+            try:
+                os.makedirs(dirname)
+            except OSError as exception:
+                if excpetion.errno != errno.EEXIST:
+                    raise
         with open(filename, 'w') as f:
             f.write(self.dump())
 
