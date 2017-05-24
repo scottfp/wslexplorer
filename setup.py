@@ -5,7 +5,7 @@ with open ('README.rst') as f:
 
 setup(
     name='wslexplorer',
-    version='0.1.1',
+    version='0.1.2',
     description='Simple script that launches Window Explorer from Windows Subsystem for Linux',
     long_description=long_description,
     url='https://github.com/scottfp/wslexplorer',
