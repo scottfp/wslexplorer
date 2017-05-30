@@ -3,7 +3,7 @@ Simple script that launches Window Explorer from Windows Subsystem for Linux
 
 # Installation
 ```
-pip install wslexplorer
+pip3 install wslexplorer
 ```
 
 # Usage
